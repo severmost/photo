@@ -453,10 +453,13 @@ main {
     font-size: 1rem;
   }
   .services_box {
-    height: 466px;
+    height: 550px;
   }
   .service {
     width: 300px;
+  }
+  .service-name {
+    font-size: 1.1rem;
   }
   .price-item {
     width: 60%;
