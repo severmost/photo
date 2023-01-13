@@ -6,7 +6,7 @@ const prevBtn = document.querySelector('.prevbtn')
 const nextBtn = document.querySelector('.nextbtn')
 const servicebox = document.querySelector('.services')
 const itemWidth = servicebox.querySelector('.service').clientWidth
-
+const banners = ['banner.jpg', 'banner2.jpg', 'banner3.jpg', 'asya.jpg']
 menuToggle.addEventListener('click', function () {
   menu.classList.toggle('active')
   this.classList.toggle('active')
@@ -35,8 +35,11 @@ function scrollToPrevItem() {
   servicebox.scrollBy({ left: -itemWidth, top: 0, behavior: 'smooth' })
 }
 
+//ПРАЙС
+
 const prices = document.querySelectorAll('.price-header')
 const pricesDescr = document.querySelectorAll('.description-p')
+const priceBack = document.querySelector('.price-description')
 
 prices.forEach((price, i) => {
   console.log(i)
@@ -50,4 +53,5 @@ function changePrice(i, price) {
   price.classList.toggle('active-price')
   pricesDescr.forEach((descr) => descr.classList.add('none'))
   pricesDescr[i].classList.remove('none')
+  priceBack.style.backgroundImage = `url('${banners[i]}')`
 }

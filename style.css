@@ -4,50 +4,60 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ddd;
+  background: linear-gradient(#333, 1%, #fff);
 }
 
+/* ШАПКА */
 .banner {
-  background-image: url('banner2.jpg');
+  background-image: url('banner3.jpg');
   position: relative;
   width: 100%;
-  height: 500px;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .head-block {
   position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-around;
-  width: 40%;
+  width: 100%;
   height: 100%;
-  top: 0%;
+  top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding-left: 20px;
+
+  text-align: center;
 }
 .head-block h1 {
-  font-size: 3.3rem;
-  margin-top: 100px;
-  margin-bottom: 0;
+  font-size: 4.3rem;
+}
+.head-block h1 span {
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6d01, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .head-block h1 strong {
-  color: orange;
+  color: #ff6d01;
+}
+.head-block h3 {
+  font-size: 1.5rem;
 }
 .head-block button {
-  background-color: orange;
+  background-color: #ff6d01;
   padding: 10px 20px;
-  margin-bottom: 20px;
+  margin-top: 50px;
   border: none;
   border-radius: 5;
   font-family: FE;
   font-weight: bold;
   font-size: 1.5rem;
-  opacity: 0.6;
+  width: 100%;
+  border-radius: 5px;
 }
 .head-block button:hover {
   background-color: black;
@@ -66,7 +76,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 3;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -191,46 +201,49 @@ main {
 .folio_box,
 .price_box,
 .contacts_box {
-  margin: 30px auto;
-  margin-bottom: 20%;
+  margin: 0;
+  margin-bottom: 7%;
   width: 100%;
-  height: 800px;
-  background-color: gray;
+  height: 700px;
+  /* background-color: gray; */
 }
 
 .block-title {
   margin: 0;
-  margin-bottom: 0;
   width: 50%;
-  color: #ddd;
-  /* box-shadow: 10px 10px #777; */
+  color: orange;
 }
 .block-title div {
-  /* width: 100%; */
-  margin: 0 auto;
-  /* text-align: center; */
-  background-color: rgba(255, 89, 0, 0.7);
+  /* background-color: #333; */
+  position: relative;
 }
 .block-title h1 {
   font-family: 'FE';
-  font-weight: 100;
+  font-weight: bold;
   padding: 10px;
   display: block;
   font-size: 3.2rem;
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
-
+.orange-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: #333; */
+  width: 50%;
+  height: 105%;
+  z-index: 0;
+}
 /* СЕРВИСЫ */
 .services_box {
-  margin: 0 !important;
-  background-color: #ddd;
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 .services {
+  z-index: 2;
   display: flex;
   overflow-x: auto;
 }
@@ -269,10 +282,11 @@ main {
   padding: 0;
 }
 .service p {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
+  text-shadow: 1px 1px #000;
   font-size: 1.6rem;
-  color: #000;
+  color: #333;
 }
 
 .service {
@@ -281,12 +295,12 @@ main {
   background-position: center;
 }
 .service button {
+  background-color: #ff6d01;
   padding: 10px 20px;
   border: none;
-  border-radius: 5;
+  border-radius: 5px;
   font-family: FE;
   font-size: 1.5rem;
-  opacity: 0.6;
 }
 .service button:hover {
   background-color: black;
@@ -295,6 +309,7 @@ main {
 }
 
 .srv-btn {
+  z-index: 2;
   cursor: pointer;
   margin: 0 20px;
   padding: 0;
@@ -303,7 +318,6 @@ main {
   align-items: center;
   width: 100px;
   height: 100px;
-  background-color: rgba(255, 89, 0, 0.7);
 }
 .srv-btn img {
   width: 50%;
@@ -333,22 +347,22 @@ main {
 
 .services::-webkit-scrollbar-thumb {
   /* border-radius: 10px; */
-  background: linear-gradient(
-    180deg,
-    rgba(255, 89, 0, 0.7),
-    rgba(255, 89, 0, 0.7)
-  );
+  background: #333;
 }
 
 /* ПРАЙС */
 .price_box {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  height: 500px;
+  height: 600px;
+  margin-top: 0;
 }
 .price-item {
+  z-index: 1;
   width: 33.3%;
   margin: 0;
   padding: 0;
@@ -376,9 +390,16 @@ main {
   color: orange;
 }
 .price-description {
+  z-index: 1;
   width: 66.6%;
   height: 100%;
   background-image: url('banner.jpg');
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -414,12 +435,18 @@ main {
     display: none;
   }
   .head-block {
-    width: 100%;
-    align-items: center;
-    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
   .head-block h3 {
     text-align: center;
+  }
+  .price-item {
+    width: 60%;
+  }
+  .price-header {
+    font-size: 15px;
   }
   .price-description,
   .descr-back,
@@ -461,9 +488,17 @@ main {
   }
 }
 @media (max-width: 960px) {
+  .services_box {
+    height: 700px;
+    margin-bottom: 100px;
+  }
   .block-title {
     width: 75%;
     font-size: 20px;
+  }
+  .orange-block {
+    height: 720px;
+    width: 75%;
   }
 }
 @media (max-width: 647px) {
@@ -491,6 +526,25 @@ main {
   }
 }
 
+@media (max-width: 1090px) {
+  .head-block h1 {
+    font-size: 3.5rem;
+  }
+  .head-block h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .head-block h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-height: 800px) {
+  .service {
+    height: 650px;
+    width: 418px;
+  }
+}
 @font-face {
   font-family: 'FE';
   src: url('fonts/FE.otf') format('opentype');
