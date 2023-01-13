@@ -246,12 +246,12 @@ main {
   z-index: 2;
   display: flex;
   overflow-x: auto;
+  height: 100%;
 }
 .service-name {
   font-size: 1.5rem;
   color: #ddd;
   margin: 0;
-  /* margin-bottom: 40%; */
   padding: 0;
   width: 100%;
   text-align: center;
@@ -266,7 +266,7 @@ main {
   margin-right: 20px;
   flex: 0 0 auto;
   width: 450px;
-  height: 700px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -290,10 +290,10 @@ main {
 }
 
 .service {
-  background-image: url(asya.jpg);
   background-size: cover;
   background-position: center;
 }
+
 .service button {
   background-color: #ff6d01;
   padding: 10px 20px;
@@ -425,6 +425,9 @@ main {
 }
 
 @media (max-width: 768px) {
+  .header-descr div h3 {
+    font-size: 1.3rem;
+  }
   header nav ul {
     display: none;
   }
@@ -441,6 +444,19 @@ main {
   }
   .head-block h3 {
     text-align: center;
+  }
+  .service-name {
+    font-size: 1.3rem;
+  }
+  .service p {
+    text-shadow: none;
+    font-size: 1rem;
+  }
+  .services_box {
+    height: 466px;
+  }
+  .service {
+    width: 300px;
   }
   .price-item {
     width: 60%;
@@ -461,6 +477,10 @@ main {
     padding-right: 5px;
     text-align: center;
     font-size: 1rem;
+  }
+  .prevbtn,
+  .nextbtn {
+    display: none;
   }
 }
 
@@ -488,10 +508,6 @@ main {
   }
 }
 @media (max-width: 960px) {
-  .services_box {
-    height: 700px;
-    margin-bottom: 100px;
-  }
   .block-title {
     width: 75%;
     font-size: 20px;
@@ -502,27 +518,13 @@ main {
   }
 }
 @media (max-width: 647px) {
-  /* .block-title {
-    margin-top: 100px;
-  } */
   .block-title h1 {
     font-size: 30px;
   }
-  .services_box {
-    width: 100%;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  /* .services {
-    margin: 30px, 0;
-  } */
+
   .srv-btn {
     margin: 0;
     padding: 0;
-  }
-  .service {
-    width: 370px;
-    height: 600px;
   }
 }
 
@@ -540,8 +542,10 @@ main {
   }
 }
 @media (max-height: 800px) {
-  .service {
+  .services_box {
     height: 650px;
+  }
+  .service {
     width: 418px;
   }
 }
