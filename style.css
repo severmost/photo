@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #fff;
+  background: linear-gradient(#ccc, #fff);
 }
 
 /* ШАПКА */
@@ -205,7 +205,7 @@ header .menu-toggle.active .line:nth-of-type(3) {
 .block-title {
   margin: 0;
   width: 50%;
-  color: orange;
+  color: #333;
 }
 .block-title div {
   /* background-color: #333; */
@@ -246,6 +246,9 @@ header .menu-toggle.active .line:nth-of-type(3) {
   margin: 0 auto;
   padding: 10px;
 }
+.service-name h1 i {
+  font-weight: 100;
+}
 
 .service {
   width: 24.8%;
@@ -267,9 +270,9 @@ header .menu-toggle.active .line:nth-of-type(3) {
 .service p {
   background-color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
-  text-shadow: 1px 1px #000;
+  /* text-shadow: 1px 1px #000; */
   font-size: 1.6rem;
-  color: #333;
+  color: #000;
 }
 
 .service {
@@ -295,16 +298,16 @@ header .menu-toggle.active .line:nth-of-type(3) {
 .srv-btn {
   z-index: 2;
   cursor: pointer;
-  margin: 0 20px;
+  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 50px;
   height: 100px;
 }
 .srv-btn img {
-  width: 50%;
+  width: 100%;
 }
 .prevbtn {
   margin: 0;
@@ -406,9 +409,108 @@ header .menu-toggle.active .line:nth-of-type(3) {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 1.4rem;
 }
-.none {
+/* ПОРТФОЛИО */
+.folio_box {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: linear;
+}
+.folio-names {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+}
+.folio-names a {
+  text-decoration: none;
+  color: #333;
+}
+
+.folio-names .active-link:after {
+  background-color: #ff6d01;
+}
+.folio-photos {
+  height: 600px;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.f-photo {
+  margin: 0;
+  padding: 0;
+  width: 32.33%;
+  height: 46%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.folio-videos {
+  height: 600px;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+.f-video {
+  margin: 0;
+  padding: 0;
+  height: 96%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.folio-makeup {
+  height: 600px;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.f-makeup {
+  margin: 0;
+  padding: 0;
+  height: 96%;
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.little {
   display: none;
 }
+.go-to-fol {
+  display: block;
+  margin: 0 auto;
+  width: 33.33%;
+  background-color: #ff6d01;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5;
+  font-family: FE;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+.go-to-fol:hover {
+  cursor: pointer;
+  background-color: #333;
+  color: #ddd;
+}
+/* КОНТАКТЫ */
 .contacts_box {
   display: flex;
   flex-direction: column;
@@ -426,13 +528,13 @@ header .menu-toggle.active .line:nth-of-type(3) {
   height: 500px;
 }
 .contacts {
-  width: 20%;
+  width: 30%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
 }
 .contacts p,
@@ -461,12 +563,41 @@ header .menu-toggle.active .line:nth-of-type(3) {
   left: 0;
   width: 100%;
 }
+.none {
+  display: none;
+}
+@media (max-width: 1350px) {
+  .folio-videos,
+  .folio-makeup,
+  .folio-photos {
+    height: 500px;
+  }
+}
+@media (max-width: 1200px) {
+  .prevbtn,
+  .nextbtn {
+    display: block;
+  }
+  .services {
+    overflow-x: auto;
+  }
+  .service {
+    min-width: 350px;
+    margin-right: 10px;
+  }
+}
+
 @media (max-width: 1090px) {
   .head-block h1 {
     font-size: 3.5rem;
   }
   .head-block h3 {
     font-size: 1rem;
+  }
+  .folio-videos,
+  .folio-makeup,
+  .folio-photos {
+    height: 450px;
   }
 }
 
@@ -475,14 +606,57 @@ header .menu-toggle.active .line:nth-of-type(3) {
     width: 75%;
     font-size: 20px;
   }
-  .orange-block {
-    height: 720px;
-    width: 75%;
+  .folio-makeup,
+  .folio-photos,
+  .folio-videos {
+    background-color: initial;
+  }
+  .folio-photos {
+    height: 900px;
+  }
+  .f-photo {
+    width: 49%;
+    height: 32.33%;
+  }
+  .folio-videos {
+    width: 100%;
+    height: 600px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+  }
+  .f-video {
+    margin-right: 10px;
+    min-width: 300px;
+    max-height: 90%;
+  }
+  .folio-makeup {
+    height: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .f-makeup {
+    height: 50%;
+    width: 33.33%;
+  }
+  .little {
+    display: block;
   }
 }
 @media (max-width: 900px) {
   .head-block h1 {
     font-size: 2.2rem;
+  }
+  .contacts_box {
+    height: 350px;
+  }
+  .contacts {
+    width: 100%;
+  }
+  .ymap {
+    top: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -506,22 +680,7 @@ header .menu-toggle.active .line:nth-of-type(3) {
   .head-block h3 {
     text-align: center;
   }
-  .service-name {
-    font-size: 1.3rem;
-  }
-  .service p {
-    text-shadow: none;
-    font-size: 1rem;
-  }
-  .services_box {
-    height: 550px;
-  }
-  .service {
-    width: 300px;
-  }
-  .service-name {
-    font-size: 1.1rem;
-  }
+
   .price-item {
     width: 60%;
   }
@@ -542,25 +701,20 @@ header .menu-toggle.active .line:nth-of-type(3) {
     text-align: center;
     font-size: 1rem;
   }
-  .prevbtn,
-  .nextbtn {
-    display: none;
-  }
 }
 @media (max-width: 647px) {
   .block-title h1 {
     font-size: 30px;
-  }
-
-  .srv-btn {
-    margin: 0;
-    padding: 0;
   }
 }
 
 @media (max-width: 500px) {
   .head-block h1 {
     font-size: 2.5rem;
+  }
+  .prevbtn,
+  .nextbtn {
+    display: none;
   }
 }
 
@@ -586,11 +740,6 @@ header .menu-toggle.active .line:nth-of-type(3) {
 @font-face {
   font-family: 'FE';
   src: url('fonts/FE.otf') format('opentype');
-  font-weight: 100;
-}
-@font-face {
-  font-family: 'KV';
-  src: url('fonts/KV.ttf') format('truetype');
   font-weight: 100;
 }
 

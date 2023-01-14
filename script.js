@@ -42,8 +42,10 @@ const pricesDescr = document.querySelectorAll('.description-p')
 const priceBack = document.querySelector('.price-description')
 
 prices.forEach((price, i) => {
-  console.log(i)
-  price.addEventListener('click', () => changePrice(i, price))
+  price.addEventListener('click', (e) => {
+    e.preventDefault()
+    changePrice(i, price)
+  })
 })
 
 function changePrice(i, price) {
@@ -54,4 +56,25 @@ function changePrice(i, price) {
   pricesDescr.forEach((descr) => descr.classList.add('none'))
   pricesDescr[i].classList.remove('none')
   priceBack.style.backgroundImage = `url('${banners[i]}')`
+}
+
+//ПОРТФОЛИО
+
+const folioLinks = document.querySelectorAll('.folio-names a')
+const folioWorks = document.querySelectorAll('.fol')
+
+folioLinks.forEach((folio, i) => {
+  folio.addEventListener('click', (e) => {
+    e.preventDefault()
+    changeFolio(i, folio)
+  })
+})
+
+function changeFolio(i, folio) {
+  folioLinks.forEach((_folio) => {
+    _folio.classList.remove('active-link')
+  })
+  folio.classList.add('active-link')
+  folioWorks.forEach((work) => work.classList.add('none'))
+  folioWorks[i].classList.remove('none')
 }
