@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(#333, 1%, #fff);
+  background: #fff;
 }
 
 /* ШАПКА */
@@ -193,19 +193,13 @@ header .menu-toggle.active .line:nth-of-type(3) {
   transform: rotate(-90deg) translate(21px, 20px);
 }
 
-main {
-  margin-top: 100px;
-}
 .services_box,
 .benefits_box,
 .folio_box,
 .price_box,
 .contacts_box {
   margin: 0;
-  margin-bottom: 7%;
   width: 100%;
-  height: 700px;
-  /* background-color: gray; */
 }
 
 .block-title {
@@ -225,28 +219,19 @@ main {
   font-size: 3.2rem;
   margin-bottom: 0;
 }
-.orange-block {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* background-color: #333; */
-  width: 50%;
-  height: 105%;
-  z-index: 0;
-}
 /* СЕРВИСЫ */
 .services_box {
-  position: relative;
+  height: 600px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .services {
-  z-index: 2;
   display: flex;
-  overflow-x: auto;
+  justify-content: space-between;
   height: 100%;
+  width: 100%;
 }
 .service-name {
   font-size: 1.5rem;
@@ -263,9 +248,7 @@ main {
 }
 
 .service {
-  margin-right: 20px;
-  flex: 0 0 auto;
-  width: 450px;
+  width: 24.8%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -301,6 +284,7 @@ main {
   border-radius: 5px;
   font-family: FE;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .service button:hover {
   background-color: black;
@@ -323,10 +307,12 @@ main {
   width: 50%;
 }
 .prevbtn {
-  margin-left: 0;
+  margin: 0;
+  display: none;
 }
 .nextbtn {
-  margin-right: 0;
+  margin: 0;
+  display: none;
 }
 .prevbtn img {
   transform: rotate(-90deg);
@@ -423,13 +409,57 @@ main {
 .none {
   display: none;
 }
-@media (max-height: 800px) {
-  .services_box {
-    height: 650px;
-  }
-  .service {
-    width: 418px;
-  }
+.contacts_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.contacts_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  /* text-align: center; */
+  position: relative;
+  z-index: 2;
+  height: 500px;
+}
+.contacts {
+  width: 20%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+.contacts p,
+.contacts a {
+  color: #ddd;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.contacts a {
+  font-weight: bold;
+}
+.social {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.social img {
+  height: 100%;
+}
+.ymap {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 @media (max-width: 1090px) {
   .head-block h1 {
