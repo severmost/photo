@@ -774,6 +774,7 @@ header .menu-toggle.active .line:nth-of-type(3) {
   }
   .service {
     min-width: 100%;
+    overflow-y: hidden;
   }
   .service-name {
     font-size: 1rem;
@@ -787,7 +788,6 @@ header .menu-toggle.active .line:nth-of-type(3) {
   .service button {
     padding: 5px 10px;
     font-size: 1.2rem;
-    font-weight: normal;
   }
   .f-video {
     min-width: 100%;
