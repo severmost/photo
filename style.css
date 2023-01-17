@@ -814,6 +814,11 @@ header .menu-toggle.active .line:nth-of-type(3) {
     transition-duration: 0.25s;
     transition-timing-function: linear;
   }
+  /* .price-header {
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  } */
   .price-header h3:hover {
     transform: scale(1.3);
   }
