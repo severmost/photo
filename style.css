@@ -194,7 +194,20 @@ header .menu-toggle.active .line:nth-of-type(2) {
 header .menu-toggle.active .line:nth-of-type(3) {
   transform: rotate(-90deg) translate(21px, 20px);
 }
-
+footer {
+  display: flex;
+  width: 100%;
+  background-color: #333;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #ddd;
+}
+footer a {
+  text-decoration: none;
+  color: #ff6d01;
+}
 .services_box,
 .benefits_box,
 .folio_box,
@@ -414,7 +427,7 @@ header .menu-toggle.active .line:nth-of-type(3) {
 .description-p {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   width: 95%;
   color: #000;
