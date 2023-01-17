@@ -197,6 +197,20 @@ header .menu-toggle.active .line:nth-of-type(3) {
   font-size: 3.2rem;
   margin-bottom: 0;
 }
+footer {
+  display: flex;
+  width: 100%;
+  background-color: #333;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #ddd;
+}
+footer a {
+  text-decoration: none;
+  color: #ff6d01;
+}
 
 @media (max-width: 1090px) {
   .head-block h1 {
@@ -231,6 +245,7 @@ header .menu-toggle.active .line:nth-of-type(3) {
     text-align: center;
   }
 }
+
 @media (max-width: 647px) {
   .block-title h1 {
     font-size: 30px;
