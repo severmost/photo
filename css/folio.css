@@ -1,0 +1,113 @@
+.folio-photo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.type {
+  margin: 20px 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+}
+.type .descr {
+  margin-left: 20px;
+  max-width: 60%;
+}
+.type .face {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+}
+.folio-photo .photo {
+  cursor: pointer;
+  margin: 20px;
+  width: 400px;
+  height: 225px;
+  background-size: cover;
+  background-position: center;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.photo:hover,
+.vert-photo:hover {
+  opacity: 0.9;
+}
+.folio-photo .vert-photo {
+  cursor: pointer;
+  margin: 20px;
+  width: 225px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+  top: 10%;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.modal img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.none {
+  display: none;
+}
+
+.folio-nav {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 255, 255);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+}
+.folio-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+.folio-nav a:hover {
+  color: #ff6d01;
+}
+.folio-video {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+.video {
+  height: 400px;
+  margin: 20px;
+}
+.video:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
